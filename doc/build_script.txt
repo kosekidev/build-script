@@ -107,7 +107,7 @@ Example :
                 {
                     "<leader>cbs",
                     function()
-                        require("build-script").open_quicklist(function(command)
+                        require("build_script").open_quicklist(function(command)
                             -- Execute what you want like open a new tmux window with this command
                             -- This overrides the default executor_callback
                             local tmux_cmd = 'silent !tmux neww "' .. command .. '"'
