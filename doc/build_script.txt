@@ -1,4 +1,4 @@
-*build_script.txt*                              Project's build script quicklist
+*build-script* *build_script*                   Project's build script quicklist
 
 ==============================================================================
 Table of Contents                               *build-script-table-of-contents*
