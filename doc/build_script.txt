@@ -1,19 +1,19 @@
 *build_script.txt*                              Project's build script quicklist
 
 ==============================================================================
-Table of Contents                               *build_script-table-of-contents*
+Table of Contents                               *build-script-table-of-contents*
 
-1. Installation                                      |build_script-installation|
-2. Usage                                                    |build_script-usage|
-3. Configuration                                    |build_script-configuration|
+1. Installation                                      |build-script-installation|
+2. Usage                                                    |build-script-usage|
+3. Configuration                                    |build-script-configuration|
 
 ==============================================================================
-1. Installation                                      *build_script-installation*
+1. Installation                                      *build-script-installation*
 
 lazy.vim <https://github.com/folke/lazy.nvim>
 
 >lua
-    { "kosekidev/build_script",
+    { "kosekidev/build-script",
       opts = {
         executor_callback = function (command)
           -- Do what you want
@@ -24,19 +24,19 @@ lazy.vim <https://github.com/folke/lazy.nvim>
 
 
 ==============================================================================
-2. Usage                                                    *build_script-usage*
+2. Usage                                                    *build-script-usage*
 
 Open build script quicklist with :
 >vim
     :OpenBuildScripts
 <
 
-build_script should find your package.json at the root of your project if you have it.
+build-script should find your package.json at the root of your project if you have it.
 The plugin add "npm run " before each command, but you can change it with
 the package_json_prefix option :
 
 >lua
-    { "kosekidev/build_script",
+    { "kosekidev/build-script",
       opts = {
         executor_callback = function (command)
           -- Do what you want
@@ -62,14 +62,14 @@ If you don't have package.json file, you can create a build_config.json file lik
 Note : package_json_prefix don't be added before build_config.json commands
 
 ==============================================================================
-2. Configuration                                    *build_script-configuration*
+2. Configuration                                    *build-script-configuration*
 
 You must call setup function to set the executor_callback function.
 This function is called when you choose a command to execute with the quicklist.
 
 Example with tmux new window that execute the command :
 >lua
-    require("build_script").setup({
+    require("build-script").setup({
       executor_callback = function (command)
         local tmux_cmd = 'silent !tmux neww "' .. command .. '"'
         vim.cmd(tmux_cmd)
@@ -81,7 +81,7 @@ With lazy.vim, you can just define opts object, no need to call manually the set
 
 >lua
     { 
-      "kosekidev/build_script",
+      "kosekidev/build-script",
       opts = {
         executor_callback = function (command)
           local tmux_cmd = 'silent !tmux neww "' .. command .. '"'
@@ -97,7 +97,7 @@ Example :
 
 >lua
     {
-        "kosekidev/build_script",
+        "kosekidev/build-script",
         opts = {
             executor_callback = function(command)
                 require("toggleterm").exec(command, 1, 12)
@@ -107,7 +107,7 @@ Example :
                 {
                     "<leader>cbs",
                     function()
-                        require("build_script").open_quicklist(function(command)
+                        require("build-script").open_quicklist(function(command)
                             -- Execute what you want like open a new tmux window with this command
                             -- This overrides the default executor_callback
                             local tmux_cmd = 'silent !tmux neww "' .. command .. '"'
