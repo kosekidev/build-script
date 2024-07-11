@@ -2,7 +2,7 @@
 
 A plugin to provide a quicklist to execute build script defined in package.json or in a build_config.json file.
 
-![image](https://github.com/kosekidev/build_script/assets/62622114/fcdc5015-428f-49f4-865a-6f607d7d0dbf)
+![image](https://github.com/kosekidev/build-script/assets/62622114/fcdc5015-428f-49f4-865a-6f607d7d0dbf)
 
 ## Installation
 
@@ -11,7 +11,7 @@ With [lazy.vim](https://github.com/folke/lazy.nvim) :
 
 ```lua
 {
-    "kosekidev/build_script",
+    "kosekidev/build-script",
     opts = {
         executor_callback = function(command)
 	    require("toggleterm").exec(command, 1, 12)
@@ -31,7 +31,7 @@ Ex with toggleterm plugin :
 
 ```lua
 {
-    "kosekidev/build_script",
+    "kosekidev/build-script",
     opts = {
         executor_callback = function(command)
             require("toggleterm").exec(command, 1, 12)
@@ -61,7 +61,7 @@ Another example for Tmux users (create a new window with the command):
 
 ```lua
 {
-  "kosekidev/build_script",
+  "kosekidev/build-script",
   opts = {
     executor_callback = function (command)
       local tmux_cmd = 'silent !tmux neww "' .. command .. '"'
@@ -80,13 +80,13 @@ Run the choosen command in a new tmux window with `<leader>bs`.
 
 ```lua
 return {
-    "kosekidev/build_script",
+    "kosekidev/build-script",
     keys = {
         { "<leader>bs", "<cmd>silent :OpenBuildScripts<CR>", { desc = "Open project's build script quicklist" } },
         {
             "<leader>pbs",
             function()
-                require("build_script").open_quicklist(function(command)
+                require("build-script").open_quicklist(function(command)
                     local tmux_cmd = 'silent !tmux split-window "' .. command .. '"'
                     vim.cmd(tmux_cmd)
                 end)
