@@ -2,7 +2,7 @@
 " Description:  A plugin to provide a quicklist to execute build script
 " command
 " Last Change:  7 October 2023
-" Maintainer:   KosekiDev <https://github.com/KosekiDev>
+" Maintainer:   kosekidev <https://github.com/kosekidev>
 
 " Prevents the plugin from being loaded multiple times. If the loaded
 " variable exists, do nothing more. Otherwise, assign the loaded
