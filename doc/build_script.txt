@@ -1,4 +1,4 @@
-*build_script* *build-script*                 Project's build script quicklist
+*build_script* *build-script*                           Build script quicklist
 
 ==============================================================================
 Table of Contents                             *build_script-table-of-contents*
