@@ -1,14 +1,14 @@
 *build-script* *build_script*                   Project's build script quicklist
 
 ==============================================================================
-Table of Contents                               *build-script-table-of-contents*
+Table of Contents                               *build_script-table-of-contents*
 
-1. Installation                                      |build-script-installation|
-2. Usage                                                    |build-script-usage|
-3. Configuration                                    |build-script-configuration|
+1. Installation                                      |build_script-installation|
+2. Usage                                                    |build_script-usage|
+3. Configuration                                    |build_script-configuration|
 
 ==============================================================================
-1. Installation                                      *build-script-installation*
+1. Installation                                      *build_script-installation*
 
 lazy.vim <https://github.com/folke/lazy.nvim>
 
@@ -24,7 +24,7 @@ lazy.vim <https://github.com/folke/lazy.nvim>
 
 
 ==============================================================================
-2. Usage                                                    *build-script-usage*
+2. Usage                                                    *build_script-usage*
 
 Open build script quicklist with :
 >vim
@@ -62,7 +62,7 @@ If you don't have package.json file, you can create a build_config.json file lik
 Note : package_json_prefix don't be added before build_config.json commands
 
 ==============================================================================
-2. Configuration                                    *build-script-configuration*
+2. Configuration                                    *build_script-configuration*
 
 You must call setup function to set the executor_callback function.
 This function is called when you choose a command to execute with the quicklist.
